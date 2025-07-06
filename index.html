@@ -17,9 +17,25 @@
             <h1 class="site-title">Tic Tac Toe</h1>
         </header>
 
+        <!-- Modal Management -->
+        <div id="player-modal" class="modal">
+            <div class="modal-content">
+                <h2>Enter Player Info</h2>
+                <form id="player-form">
+                    <label>Player 1 Name:</label>
+                    <input type="text" id="player1" required />
+
+                    <label>Player 2 Name:</label>
+                    <input type="text" id="player2" required />
+                    <button id="start-btn">Start a New Game</button>
+                </form>
+            </div>
+        </div>
+
         <main class="main-content">
-            <button id="start-btn">Start a New Game</button>
-            <div class="gameboard"></div>
+            <div class="gameboard">
+
+            </div>
         </main>
 
     </div>
