@@ -6,37 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
 
-    <div class="page-wrapper">
-
+    <div class="game-container">
         <header class="site-header">
             <h1 class="site-title">Tic Tac Toe</h1>
         </header>
 
         <!-- Modal Management -->
-        <div id="player-modal" class="modal">
-            <div class="modal-content">
-                <h2>Enter Player Info</h2>
-                <form id="player-form">
-                    <label>Player 1 Name:</label>
-                    <input type="text" id="player1" required />
+        <div class="setup-form" id="setupForm">
+            <div class="player-inputs">
+                <div class="player-input">
+                    <label for="player1Name">Player 1 (X):</label>
+                    <input type="text" id="player1Name" placeholder="Enter name" maxlength="15">
+                </div>
+                <div class="player-input">
+                    <label for="player2Name">Player 2 (O):</label>
+                    <input type="text" id="player2Name" placeholder="Enter name" maxlength="15">
+                </div>
+            </div>
+            <button class="start-btn" onclick="GameController.startGame()">Start Game</button>
+        </div>>
 
-                    <label>Player 2 Name:</label>
-                    <input type="text" id="player2" required />
-                    <button id="start-btn">Start a New Game</button>
-                </form>
+        <div class="game-area hidden" id="gameArea">
+            <div class="game-info">
+                <div class="current-player" id="currentPlayer"></div>
+                <div class="game-result" id="gameResult"></div>
+            </div>
+
+            <div class="game-board" id="gameBoard"></div>
+
+            <div class="buttons">
+                <button class="restart-btn" onclick="GameController.restartGame()">Restart Game</button>
             </div>
         </div>
-
-        <main class="main-content">
-            <div class="gameboard">
-
-            </div>
-        </main>
 
     </div>
 
